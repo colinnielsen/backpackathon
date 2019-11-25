@@ -2,21 +2,64 @@
    font-family: Gotham;
    src: url("../font.otf") format("opentype");
 }
+@font-face {
+   font-family: Gotham-Italic;
+   src: url("../italic.otf") format("opentype");
+}
+@font-face {
+   font-family: Gotham-lightItal;
+   src: url("../medItal.otf") format("opentype");
+}
 
 * {
    box-sizing: border-box;
 }
 
-body {
+body{
+   background: #D9632B;
+}
+
+.blue {
    background: #21263a;
 }
 
-section {
-   position: relative;
-   height: 100vh;
-   width: 100vw;
+.slideTwo {
+   background: url('../img/APO10.jpg') no-repeat 50% 50%;
+   background-size: cover;
 }
 
+.slideThree {
+   background: url('https://lh3.googleusercontent.com/8_b3s_aa0GJYjr-tSkrqaF7QogXSzUPM-CSZsohCWTk2HhprjXd-bVJx1vavnrnrcxTeT_zyWbM6zn3On4EN4Fl9ThW-sRwLgEi1gBx4SlbqaObAj3t5JjFd1p8DhpAV--VvNSsw') no-repeat 50% 50%;
+   background-size: cover;
+}
+
+section {
+   top: 0;
+   height: 100vh;
+   width: 100vw;
+   background-size: cover;
+   background: url('../img/APO2.jpg') no-repeat 50% 50%;
+}
+
+li {
+   text-decoration: none;
+   list-style-type: none;
+   font-family: 'Gotham', sans-serif;   
+   font-size: 25px;
+   margin: 20px;
+   color: #ffe5db;
+   font-weight: 500;
+}
+
+ul {
+   display: flex;
+   flex-direction: row;
+   width: 50%;
+
+}
+nav {
+   float: right;
+}
 aside {
    position: relative;
    height: 50vh;
@@ -31,7 +74,6 @@ h2 {
 }
 
 .grid-12 {
-   height: 100%;
    display: grid;
    grid-template-columns: repeat(12, 1fr);
    grid-template-rows: repeat(12, 1fr);
@@ -63,6 +105,14 @@ h2 {
    grid-column: 4 /span 3;
 }
 
+.position-intro {
+   font-family: Gotham-lightItal;
+   font-size: 60px;
+   grid-row: 4 /span 10;
+   grid-column: 2 / span 10 ;
+   text-align: center;
+}
+
 #arrow {
    transform: translate(-90deg);
 }
@@ -83,18 +133,41 @@ h2 {
    width: 120px;
    grid-row: 4 / span 2;
    grid-column: 10;
-   margin: 30%;
-   margin-top: 15%;
+   margin: 15%;
+   margin-top: 8%;
    z-index: 1;
    opacity: 0;
    visibility: hidden;
 }
 
 .position-introText {
-   margin-top: 30px;;
+   margin-top: 30px;
    grid-row: 4/ span 3;
-   grid-column: 3 /span 4;
+   grid-column: 3 /span 8;
    opacity: 0;
+   font-family: Gotham-Italic;
+}
+
+.logo {
+   grid-row: 1 /span 2;
+   grid-column: 1;
+   width: 150px;
+}
+
+.lightPhotoBlock {
+   width: 600px;
+   height: 700px;
+   z-index: -1;
+   background-color: #21263a;
+   transform: translate(25px, 25px);
+}
+
+.position-lightPhoto {
+   width: 800px;
+   grid-row: 4;
+   grid-column: 10;
+   opacity: 0;
+   visibility: hidden;
 }
 
 .elements {
